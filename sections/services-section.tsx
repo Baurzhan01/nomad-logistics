@@ -55,7 +55,7 @@ export function ServicesSection() {
             </div>
 
             <a
-              href="tel:+77001234567"
+              href="tel:+77758220466"
               className="inline-flex items-center gap-2 mt-8 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold hover:bg-secondary/90 hover:scale-105 transition-all"
             >
               {tc("getConsultation")}
@@ -72,7 +72,7 @@ export function ServicesSection() {
           >
             <div className="relative aspect-square rounded-3xl overflow-hidden">
               <Image
-                src="/crane-lifting-heavy-cargo-container-construction-s.jpg"
+                src="/IMG20251126142121.jpg"
                 alt="Услуги манипулятора"
                 fill
                 className="object-cover"

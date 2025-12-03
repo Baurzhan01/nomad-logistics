@@ -14,46 +14,48 @@ export function GallerySection() {
     {
       id: 1,
       type: "image",
-      src: "/crane-truck-loading-heavy-machinery-industrial.jpg",
+      src: "/IMG-20250921-WA0218.jpeg",
       alt: t("equipmentLoading"),
       title: t("equipmentLoading"),
     },
     {
       id: 2,
       type: "image",
-      src: "/manipulator-crane-lifting-concrete-blocks-construc.jpg",
+      src: "/IMG20250610202458.jpg",
       alt: t("jbiInstallation"),
       title: t("jbiInstallation"),
     },
     {
       id: 3,
       type: "image",
-      src: "/yellow-crane-truck-delivering-container-warehouse.jpg",
+      src: "/IMG20250829181948.jpg",
       alt: t("containerDelivery"),
       title: t("containerDelivery"),
     },
     {
       id: 4,
       type: "image",
-      src: "/crane-manipulator-unloading-building-materials-cit.jpg",
+      src: "/IMG20250904143055.jpg",
       alt: t("materialsUnloading"),
       title: t("materialsUnloading"),
     },
     {
       id: 5,
       type: "video",
-      src: "/crane-truck-working-at-construction-site-video-thu.jpg",
+      src: "/VID20250902110840.mp4",
       alt: t("manipulatorAtWork"),
       title: t("manipulatorAtWork"),
     },
     {
       id: 6,
       type: "image",
-      src: "/heavy-crane-lifting-prefab-house-module.jpg",
+      src: "/IMG20250902110934.jpg",
       alt: t("moduleInstallation"),
       title: t("moduleInstallation"),
     },
   ]
+
+  const currentItem = selectedImage !== null ? galleryItems[selectedImage] : null
 
   const openLightbox = (index: number) => setSelectedImage(index)
   const closeLightbox = () => setSelectedImage(null)
@@ -92,12 +94,22 @@ export function GallerySection() {
               className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"
               onClick={() => openLightbox(index)}
             >
-              <Image
-                src={item.src || "/placeholder.svg"}
-                alt={item.alt}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
+              {item.type === "video" ? (
+                <video
+                  src={item.src}
+                  muted
+                  loop
+                  playsInline
+                  className="h-1280 w-720 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              ) : (
+                <Image
+                  src={item.src || "/placeholder.svg"}
+                  alt={item.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              )}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300" />
               {item.type === "video" && (
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -115,7 +127,7 @@ export function GallerySection() {
       </div>
 
       <AnimatePresence>
-        {selectedImage !== null && (
+        {currentItem && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -154,12 +166,23 @@ export function GallerySection() {
               className="relative w-full max-w-4xl aspect-[4/3] rounded-xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src={galleryItems[selectedImage].src || "/placeholder.svg"}
-                alt={galleryItems[selectedImage].alt}
-                fill
-                className="object-contain"
-              />
+              {currentItem.type === "video" ? (
+                <video
+                  src={currentItem.src}
+                  controls
+                  autoPlay
+                  loop
+                  playsInline
+                  className="h-full w-full object-contain bg-black"
+                />
+              ) : (
+                <Image
+                  src={currentItem.src || "/placeholder.svg"}
+                  alt={currentItem.alt}
+                  fill
+                  className="object-contain"
+                />
+              )}
             </motion.div>
           </motion.div>
         )}

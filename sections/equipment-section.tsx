@@ -15,7 +15,7 @@ export function EquipmentSection() {
       name: "Sitrak C5H 12 тонн",
       image: "/IMG-20250907-WA0075.jpg",
       capacity: "12 тонн",
-      boom: "13 м",
+      boom: "16 м",
       platform: "8.5 x 2.5 м",
       works: [t("jbiProducts"), t("containers"), t("buildingMaterials")],
     },
@@ -33,8 +33,8 @@ export function EquipmentSection() {
       name: "HOWO T5G 20 тонн",
       image: "/IMG20250902130032.jpg",
       capacity: "20 тонн",
-      boom: "18 м",
-      platform: "9.0 x 2.5 м",
+      boom: "22,5 м",
+      platform: "13 x 2.5 м",
       works: [t("oversizedCargo"), t("industrialEquipment")],
     },
   ]
@@ -110,7 +110,7 @@ export function EquipmentSection() {
                 </div>
 
                 <a
-                  href="https://wa.me/77001234567"
+                  href="https://wa.me/77758220466"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground py-3 rounded-xl font-medium hover:bg-primary/90 hover:gap-3 transition-all"

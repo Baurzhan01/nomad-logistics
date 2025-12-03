@@ -76,11 +76,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@nomad-logistics.kz"
+                  href="mailto:nomad-logistics@bk.ru"
                   className="flex items-center gap-2 text-white/70 hover:text-secondary transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  info@nomad-logistics.kz
+                  nomad-logistics@bk.ru
                 </a>
               </li>
               <li className="flex items-start gap-2 text-white/70">

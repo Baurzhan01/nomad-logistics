@@ -17,6 +17,21 @@ export function ContactSection() {
     e.preventDefault()
     setIsLoading(true)
     await new Promise((resolve) => setTimeout(resolve, 1000))
+
+    const whatsappMessageLines = [
+      "Новая заявка с сайта Nomad Logistics:",
+      `Имя: ${formData.name}`,
+      `Телефон: ${formData.phone}`,
+      formData.message ? `Комментарий: ${formData.message}` : null,
+    ].filter(Boolean)
+
+    const whatsappText = whatsappMessageLines.join("\n")
+    const whatsappUrl = `https://wa.me/77758220466?text=${encodeURIComponent(whatsappText)}`
+
+    if (typeof window !== "undefined") {
+      window.open(whatsappUrl, "_blank")
+    }
+
     setIsSubmitted(true)
     setIsLoading(false)
   }
@@ -75,7 +90,7 @@ export function ContactSection() {
               </a>
 
               <a
-                href="mailto:info@nomad-logistics.kz"
+                href="mailto:nomad-logistics@bk.ru"
                 className="flex items-center gap-4 p-5 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-lg transition-all group"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -83,7 +98,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">{tc("email")}</p>
-                  <p className="font-semibold text-foreground">info@nomad-logistics.kz</p>
+                  <p className="font-semibold text-foreground">nomad-logistics@bk.ru</p>
                 </div>
               </a>
 
