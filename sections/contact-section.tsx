@@ -108,7 +108,7 @@ export function ContactSection() {
 
             <div className="aspect-video rounded-2xl overflow-hidden border border-border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.8955837661066!2d71.4102!3d51.1282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDA3JzQxLjUiTiA3McKwMjQnMzYuNyJF!5e0!3m2!1sru!2skz!4v1699999999999!5m2!1sru!2skz"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1252.1469126674403!2d71.57528334581109!3d51.12148807829544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1764757634875!5m2!1sru!2skz"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
