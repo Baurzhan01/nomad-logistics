@@ -10,6 +10,10 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin", "cyrillic"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nomad-logistics.kz"),
+  alternates: {
+    canonical: "https://nomad-logistics.kz/",
+  },
   title: "Nomad Logistics | Аренда манипулятора в Астане до 12 тонн",
   description:
     "Nomad Logistics — профессиональные услуги манипулятора в Астане. Современная техника, грузоподъёмность до 12 тонн. Работа по городу и пригородам. Звоните 24/7!",
@@ -92,6 +96,15 @@ export default async function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=AW-17777585644"
           strategy="afterInteractive"
         />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-149XJ0LZCJ" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-149XJ0LZCJ');
+          `}
+        </Script>
         <Script id="google-ads" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -101,6 +114,7 @@ export default async function RootLayout({
             gtag('config', 'AW-17777585644');
           `}
         </Script>
+        <meta name="google-site-verification" content="oa0Bxa-lP_78z_4Hc1KwRHP4Bwm73F1GfV7pUI0tzNw" />
       </head>
       <body className={`${inter.className} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
