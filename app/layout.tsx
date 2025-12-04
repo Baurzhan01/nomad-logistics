@@ -92,6 +92,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
+        <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="39fc710a-81ff-4dc8-9dc4-8c4bb0403736" type="text/javascript" async />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17777585644"
           strategy="afterInteractive"
