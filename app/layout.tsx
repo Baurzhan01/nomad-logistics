@@ -138,6 +138,16 @@ export default async function RootLayout({
             gtag('config', 'AW-17777585644');
           `}
         </Script>
+        <meta
+          name="description"
+          lang="kk"
+          content="Nomad Logistics – Қазақстан бойынша және халықаралық жүктерді тасымалдау, қоймалау, сақтандыру, 12 паллетке дейінгі экспресс жеткізу және тәулік бойы қолдау."
+        />
+        <meta
+          name="keywords"
+          lang="kk"
+          content="Nomad Logistics, жүк тасымалдау, көлік логистикасы, экспресс жеткізу, 12 паллет, қоймалау, жүкті сақтандыру, халықаралық жеткізу, Қазақстан"
+        />
         <meta name="google-site-verification" content="oa0Bxa-lP_78z_4Hc1KwRHP4Bwm73F1GfV7pUI0tzNw" />
       </head>
       <body className={`${inter.className} font-sans antialiased`}>
