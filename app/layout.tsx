@@ -96,6 +96,13 @@ export default async function RootLayout({
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="39fc710a-81ff-4dc8-9dc4-8c4bb0403736"
+          data-blockingmode="auto"
+          type="text/javascript"
+          async
+        />
+        <Script
+          id="CookieDeclaration"
+          src="https://consent.cookiebot.com/39fc710a-81ff-4dc8-9dc4-8c4bb0403736/cd.js"
           type="text/javascript"
           async
         />
@@ -104,6 +111,24 @@ export default async function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-149XJ0LZCJ"
           strategy="afterInteractive"
         />
+        <Script id="gtag-consent" strategy="afterInteractive" data-cookieconsent="ignore">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("consent", "default", {
+              ad_personalization: "denied",
+              ad_storage: "denied",
+              ad_user_data: "denied",
+              analytics_storage: "denied",
+              functionality_storage: "denied",
+              personalization_storage: "denied",
+              security_storage: "granted",
+              wait_for_update: 500,
+            });
+            gtag("set", "ads_data_redaction", true);
+            gtag("set", "url_passthrough", false);
+          `}
+        </Script>
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
